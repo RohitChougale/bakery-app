@@ -9,6 +9,7 @@ ion-card {
     ion-img {
       height: 100%;
       border-radius: 8px 8px 0 0;
+      object-fit: contain;
     }
     .rating {
       position: absolute;
@@ -75,3 +76,16 @@ ion-card {
     align-self: start;
   }
 }
+@media (min-width: 1024px) {
+  ion-card{
+    width: 22vw;
+    margin: 0 15vw;
+    ion-thumbnail{
+      ion-img{
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+
+  }

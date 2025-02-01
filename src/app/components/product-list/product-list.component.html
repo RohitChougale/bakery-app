@@ -4,7 +4,8 @@
       <swiper-container
       [modules]="SwiperModule"
       [slidePerView]="1.2"
-      [spaceBetween]="20">
+      [spaceBetween]="20"
+      [pagination]="{clickable:true, dynamicBullets:true}">
 
       @for (product of product(); track $index) {
         <swiper-slide>
