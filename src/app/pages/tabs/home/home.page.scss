@@ -1,0 +1,133 @@
+
+ion-header {
+  ion-toolbar {
+    border-radius: 0 0 20px 20px;
+
+    ion-item {
+      --background: transperant;
+      ion-label {
+        font-size: var(--font-size-small);
+        color: lightgray;
+      }
+      p {
+        color: white;
+        font-size: var(--font-size-title);
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        ion-text {
+          padding-left: 5px;
+        }
+        ion-icon {
+          font-size: var(--icon-size-small);
+        }
+      }
+      ion-button[slot="end"] {
+        --background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        ion-icon {
+          font-size: var(--icon-size-medium);
+          padding: 5px 0;
+        }
+      }
+      ion-button.notificatio {
+        margin-left: 5px;
+      }
+    }
+
+    ion-row {
+      display: flex;
+      align-items: center;
+      margin: 0 10px 10px 10px;
+      ion-button {
+        ion-icon {
+          font-size: var(--icon-size-medium);
+          padding: 0.5rem;
+        }
+      }
+      .srcBar {
+        padding: 0;
+        --border-radius: 10px;
+        --icon-color: var(--icon-color-medium);
+      }
+    }
+  }
+}
+
+// ion-content {
+//   .home{
+//     @media (min-width: 1024px) {
+//       background-image: url('../../../../assets/banners/background.jpg') ;
+//       background-size: cover;
+//       background-position: center;
+//       background-repeat: no-repeat;
+//       background-attachment: fixed;
+
+//     }
+//   .conatiner {
+//     margin: 0 1.5vh;
+//     @media (min-width: 1024px) {
+
+//       // background-image: url('../../../../assets/banners/background.png') ;
+//       width: 50%;
+//       display: flex;
+//       flex-direction: column;
+//       margin: 0 26vw;
+//     }
+//   }
+// }
+// }
+
+ion-content {
+  // --background: transparent; // Ensures Ionic doesn't override the background
+
+  .home {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden; // Prevents any background movement
+
+    @media (min-width: 1024px) {
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../../assets/banners/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1; // Keeps it behind content
+      }
+    }
+  }
+
+  .conatiner {
+    margin: 0 1.5vh;
+    position: relative;
+    z-index: 1; // Ensures content stays above background
+
+    @media (min-width: 1024px) {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 26vw;
+    }
+  }
+}
+
+.divider {
+  display: none; // Hide by default on mobile
+
+  @media (min-width: 1024px) {
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2); // Light gray line
+    margin: 30px auto;
+    border: none;
+  }
+}

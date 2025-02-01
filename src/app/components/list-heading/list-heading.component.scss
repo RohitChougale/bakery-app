@@ -1,0 +1,6 @@
+ion-item-divider{
+  --background:white;
+  @media (min-width: 1024px) {
+    --background:transparent;
+}
+}

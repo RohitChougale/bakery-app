@@ -1,0 +1,24 @@
+div{
+  transform: translateY(5%);
+  height: 25vh;
+  width: 94%;
+  margin: auto;
+  swiper-container{
+    --swiper-pagination-color:#c06014;
+    swiper-slide{
+      height: 24vh;
+      img{
+        width: 100%;
+        object-fit:cover;
+        height: 21vh;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+swiper-conatiner::part(bullet),swiper-container::part(bullet-active){
+  height: 0.9vh;
+  width: 0.9vh;
+  transform: scale(1);
+}

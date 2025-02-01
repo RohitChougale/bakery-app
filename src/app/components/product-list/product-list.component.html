@@ -1,0 +1,17 @@
+@defer (when product()!.length>0) {
+  @if (product()!.length>0) {
+    <div class="container">
+      <swiper-container
+      [modules]="SwiperModule"
+      [slidePerView]="1.2"
+      [spaceBetween]="20">
+
+      @for (product of product(); track $index) {
+        <swiper-slide>
+          <app-product [item]="product"></app-product>
+        </swiper-slide>
+      }
+      </swiper-container>
+    </div>
+  }
+}
